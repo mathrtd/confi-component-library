@@ -1,10 +1,11 @@
-import * as React, { MouseEventHandler, useState } from 'react';
+import * as React from 'react';
+import { MouseEventHandler, useState } from 'react';
 import MaskedInput from 'react-text-mask'
-import { eye } from '../../assets/svg/eye';
-import { eyeCrossed } from '../../assets/svg/eye_crossed';
-import { lockLocked } from '../../assets/svg/lock_locked';
-import { lockUnlocked } from '../../assets/svg/lock_unlocked';
-import { search } from '../../assets/svg/search';
+import { eye } from '../../src/assets/svg/eye';
+import { eyeCrossed } from '../../src/assets/svg/eye_crossed';
+import { lockLocked } from '../../src/assets/svg/lock_locked';
+import { lockUnlocked } from '../../src/assets/svg/lock_unlocked';
+import { search } from '../../src/assets/svg/search';
 import { DefaultInputWrapper } from './styles';
 import { InputFormFieldProps, InputType } from './types';
 
