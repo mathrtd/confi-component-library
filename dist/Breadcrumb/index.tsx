@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { ListContainer } from './styles';
 import { BreadcrumbProps } from './types';
 

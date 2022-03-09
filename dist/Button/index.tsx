@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import * as React, { useEffect, useState } from 'react';
 
 import { DefaultButton } from './styles';
 import { ButtonProps } from './types';

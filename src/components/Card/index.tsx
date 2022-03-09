@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Title } from '../Title'
 import { CardContainer } from './styles'
 import { CardProps } from './types'

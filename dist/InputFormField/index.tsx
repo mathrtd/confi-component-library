@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import * as React, { MouseEventHandler, useState } from 'react';
 import MaskedInput from 'react-text-mask'
 import { eye } from '../../assets/svg/eye';
 import { eyeCrossed } from '../../assets/svg/eye_crossed';

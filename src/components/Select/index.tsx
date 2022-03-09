@@ -1,4 +1,5 @@
-import React, { ChangeEvent, useRef, useState } from "react";
+import * as React from 'react';
+import { ChangeEvent, useRef, useState } from "react";
 import { iconArrowTop } from "../../assets/svg/arrow_top";
 import { InputFormField } from "../InputFormField";
 import { ErrorSpan, HiddenSelect, Option, SearchInputWrapper, SelectHeader, SelectOptionsContainer, SelectOptionsList, SelectWrapper } from "./styles";

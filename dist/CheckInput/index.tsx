@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import * as React, { forwardRef, useRef } from 'react';
 import { Box, Label, Mark } from './styles';
 import { CheckInputProps } from './types';
 
