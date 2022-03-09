@@ -33,7 +33,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "classnames": "^2.3.1",
-    "confi-component-library": "github:mathrtd/confi-component-library",
     "react-text-mask": "^5.4.3",
     "styled-components": "^5.3.3"
   },
