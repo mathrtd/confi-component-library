@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "private": false,
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/mathrtd/confi-component-library"
   },
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -23,11 +27,13 @@
     "@types/react-text-mask": "^5.4.11",
     "@types/styled-components": "^5.1.23",
     "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
     "typescript": "^4.5.5"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "classnames": "^2.3.1",
+    "confi-component-library": "github:mathrtd/confi-component-library",
     "react-text-mask": "^5.4.3",
     "styled-components": "^5.3.3"
   },
@@ -39,6 +45,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+    "clean": "rimraf dist",
+    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
   }
 }
