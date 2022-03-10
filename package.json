@@ -46,7 +46,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c",
-    "build-watch": "rollup -c -w"
+    "build-rollup": "rollup -c",
+    "build-rollup-nwatch": "rollup -c -w"
   }
 }

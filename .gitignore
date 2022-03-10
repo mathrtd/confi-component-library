@@ -1,4 +1,4 @@
 node_modules
+dist
+playground
 .github
-.github/workflows
-.github/workflows/release-package.yml
