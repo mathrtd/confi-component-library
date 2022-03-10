@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { forwardRef, useRef } from 'react';
+import { useRef } from 'react';
 import { Box, Label, Mark } from './styles';
 import { CheckInputProps } from './types';
 
-export const CheckInput: React.FC<CheckInputProps> = ({
+const CheckInput: React.FC<CheckInputProps> = ({
   name,
   label,
   checked,
@@ -45,3 +45,5 @@ export const CheckInput: React.FC<CheckInputProps> = ({
     </Label>
   );
 };
+
+export default CheckInput;

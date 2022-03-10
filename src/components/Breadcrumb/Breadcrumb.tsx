@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ListContainer } from './styles';
 import { BreadcrumbProps } from './types';
 
-export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, activeItemIndex }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, activeItemIndex }) => {
   const lastIndex = items ? items?.length - 1 : 0
 
   return (
@@ -15,3 +15,5 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, activeItemIndex }
     </ListContainer>
   );
 }
+
+export default Breadcrumb;

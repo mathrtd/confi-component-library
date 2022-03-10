@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { ChangeEvent, useRef, useState } from "react";
 import { iconArrowTop } from "../../assets/svg/arrow_top";
-import { InputFormField } from "../InputFormField";
+import InputFormField from "../InputFormField/InputFormField";
 import { ErrorSpan, HiddenSelect, Option, SearchInputWrapper, SelectHeader, SelectOptionsContainer, SelectOptionsList, SelectWrapper } from "./styles";
 import { SelectProps } from "./types";
 
-export const Select: React.FC<SelectProps> = ({
+const Select: React.FC<SelectProps> = ({
   name,
   label,
   options,
@@ -118,3 +118,5 @@ export const Select: React.FC<SelectProps> = ({
     </SelectWrapper>
   )
 }
+
+export default Select;

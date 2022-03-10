@@ -1,20 +1,20 @@
 import * as React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import { Select as SelectComponent } from ".";
+import Select from "./Select";
 import { SelectProps } from "./types";
 
 export default {
   title: "Components/Select",
-  component: SelectComponent,
+  component: Select,
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<SelectProps> = (args) => <SelectComponent {...args} />;
+const Template: Story<SelectProps> = (args) => <Select {...args} />;
 
 // Reuse that template for creating different stories
-export const Select = Template.bind({});
-Select.args = { label: "select", options: [
+export const SelectDefault = Template.bind({});
+SelectDefault.args = { label: "select", options: [
   {
     label: 'opcao 1',
     value: 'valor 1'

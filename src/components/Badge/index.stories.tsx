@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import { Badge } from ".";
+import  Badge from "./Badge";
 import { BadgeProps } from "./types";
 
 export default {

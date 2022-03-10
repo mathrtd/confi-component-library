@@ -3,7 +3,7 @@ import * as React from "react"
 import { GlobalStyle } from './styles';
 import { TitleProps } from "./types";
 
-export const Title: React.FC<TitleProps> = ({
+const Title: React.FC<TitleProps> = ({
   elementType = "title",
   text,
   ...props
@@ -22,3 +22,5 @@ export const Title: React.FC<TitleProps> = ({
     </>
   )
 }
+
+export default Title;

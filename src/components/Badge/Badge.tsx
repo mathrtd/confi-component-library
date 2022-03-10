@@ -3,7 +3,7 @@ import * as React from 'react'
 import { BadgeContainer } from './styles';
 import { BadgeProps } from './types';
 
-export const Badge: React.FC<BadgeProps> = ({
+const Badge: React.FC<BadgeProps> = ({
   value,
   fontSize,
 }) => {
@@ -11,3 +11,5 @@ export const Badge: React.FC<BadgeProps> = ({
     <BadgeContainer fontSize={fontSize}>{value}</BadgeContainer>
   )
 }
+
+export default Badge;
