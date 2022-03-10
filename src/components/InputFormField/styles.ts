@@ -20,7 +20,8 @@ export const DefaultInputWrapper = styled.div<InputFormFieldProps>`
 
   .formField-input{
     position: relative;
-
+    display: flex;
+    
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

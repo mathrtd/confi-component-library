@@ -67,7 +67,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
             placeholder=' '
             value={value}
             defaultValue={defaultValue}
-            type={localType === 'password' ? 'text' : 'password'}
+            type={localType === 'password' ? 'password' : 'text'}
             onChange={onChange}
             onFocus={onFocus}
             onBlur={onBlur}
