@@ -1,6 +1,6 @@
 {
   "name": "@mathrtd/confi-component-library",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "private": false,
@@ -47,6 +47,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-rollup": "rollup -c",
-    "build-rollup-nwatch": "rollup -c -w"
+    "build-rollup-watch": "rollup -c -w"
   }
 }
