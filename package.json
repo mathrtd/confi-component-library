@@ -41,7 +41,7 @@
   },
   "typings": "dist/index.d.ts",
   "publishConfig": {
-    "@mathrtd:registry": "https://npm.pkg.github.com"
+    "@registry": "https://npm.pkg.github.com/mathrtd"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
