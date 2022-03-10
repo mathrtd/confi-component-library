@@ -1,2 +1,4 @@
 node_modules
 .github
+.github/workflows
+.github/workflows/release-package.yml
