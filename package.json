@@ -1,7 +1,8 @@
 {
-  "name": "confi-component-library",
+  "name": "@mathrtd/confi-component-library",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "private": false,
   "files": [
     "dist",
@@ -13,10 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -26,25 +23,30 @@
     "@types/react": "^17.0.39",
     "@types/react-text-mask": "^5.4.11",
     "@types/styled-components": "^5.1.23",
-    "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
+    "rollup": "^2.70.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "classnames": "^2.3.1",
-    "react-text-mask": "^5.4.3",
-    "styled-components": "^5.3.3"
+    "react-text-mask": "^5.4.3"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0"
+    "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3"
+  },
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "@mathrtd:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w"
   }
 }
