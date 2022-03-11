@@ -131,6 +131,7 @@ export const DefaultButton = styled.button<ButtonProps>`
   font-size: ${fontSizes.sm};
   transition: all 0.2s linear;
   color: ${(props) => props.outline ? colors.darkestGray : colorsProps[props.variant].color_font_initial};
+  cursor: pointer;
 
   span{
     display: flex;
