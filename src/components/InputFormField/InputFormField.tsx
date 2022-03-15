@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
 import MaskedInput from 'react-text-mask'
 import { eye } from '../../assets/svg/eye';
 import { eyeCrossed } from '../../assets/svg/eye_crossed';

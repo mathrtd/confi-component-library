@@ -1,6 +1,6 @@
 {
   "name": "@mathrtd/confi-component-library",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "private": false,
@@ -31,12 +31,15 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "react-text-mask": "^5.4.3"
+    "react-text-mask": "^5.4.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "styled-components": "^5.3.3"
   },
   "typings": "dist/index.d.ts",
@@ -44,7 +47,7 @@
     "@registry": "https://npm.pkg.github.com/mathrtd"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
     "build-rollup": "rollup -c",
     "build-rollup-watch": "rollup -c -w"
