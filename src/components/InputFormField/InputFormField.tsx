@@ -22,6 +22,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
   activeState,
   loading,
   inputType,
+  className,
   onFocus,
   onBlur,
   onChange,
@@ -54,7 +55,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
 
   return (
     <DefaultInputWrapper
-      className='confi-input-form-field'
+      className={className}
       block={block}
       error={error}
       loading={loading}
