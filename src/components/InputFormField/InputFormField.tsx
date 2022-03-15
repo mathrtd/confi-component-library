@@ -54,6 +54,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
 
   return (
     <DefaultInputWrapper
+      className='confi-input-form-field'
       block={block}
       error={error}
       loading={loading}
