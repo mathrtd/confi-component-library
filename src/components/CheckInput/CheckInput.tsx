@@ -13,15 +13,15 @@ const CheckInput: React.FC<CheckInputProps> = ({
   readOnly,
   type = 'checkbox',
   checkedStyle,
-  onChange,
+  onCheckChange,
   ...props
 }) => {
   const inputNode = useRef<HTMLInputElement>(null);
   const handleOnClick = () => {
-    if (onChange == null || inputNode.current == null || readOnly) {
+    if (onCheckChange == null || inputNode.current == null || readOnly) {
       return;
     }
-    onChange(inputNode.current.checked, name);
+    onCheckChange(inputNode.current.checked, name);
     inputNode.current.focus();
   }
 

@@ -10,7 +10,7 @@ export interface LabelProps {
   checkedStyle?: CheckedStyleProps,
 }
 
-export interface CheckInputProps {
+export interface CheckInputProps extends InputHTMLAttributes<HTMLInputElement> {
   name?: string,
   label?: string,
   checked?: boolean,
@@ -20,5 +20,5 @@ export interface CheckInputProps {
   readOnly?: boolean,
   type?: FormCheckInputType,
   checkedStyle?: CheckedStyleProps,
-  onChange?: (newChecked: boolean, name?: string) => void,
+  onCheckChange?: (newChecked: boolean, name?: string) => void,
 }
