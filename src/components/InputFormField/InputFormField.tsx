@@ -26,6 +26,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
   onBlur,
   onChange,
   onStateToggle,
+  ...props
 }, ref) => {
   const [localType, setLocalType] = useState<InputType | undefined>(inputType)
 
@@ -62,6 +63,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
           <MaskedInput
             mask={mask}
             guide={false}
+            {...props}
           /> :
           <input
             placeholder=' '
@@ -72,6 +74,7 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
             onFocus={onFocus}
             onBlur={onBlur}
             ref={ref}
+            {...props}
           />
         }
         <label>{label}</label>
