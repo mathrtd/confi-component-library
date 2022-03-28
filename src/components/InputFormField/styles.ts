@@ -15,10 +15,11 @@ const loading = keyframes`
 
 export const DefaultInputWrapper = styled.div<InputFormFieldProps>`
   position: relative;
-  width: ${props => props.block ? "100%" : "330px"};
+  width: ${props => props.block ? "100%" : `${props.width ?? 330}px`};
   font-family: 'DM Sans', sans-serif;
 
   .formField-input{
+    width: ${props => props.width ?? 330}px;
     position: relative;
     display: flex;
     
@@ -35,6 +36,7 @@ export const DefaultInputWrapper = styled.div<InputFormFieldProps>`
     }
 
     input {
+      ${props => props.hideCursor ? 'caret-color: transparent;' : ''}
       border: ${props => props.error ? `${borders.xs} solid ${colors.danger}` : `${borders.xs} solid ${colors.darkGray}`};
       outline: none;
       width: 100%;

@@ -18,11 +18,13 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
   errorMessage,
   helpMessage,
   block,
+  width,
   mask,
   activeState,
   loading,
   inputType,
   className,
+  hideCursor,
   onFocus,
   onBlur,
   onChange,
@@ -59,12 +61,15 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
       block={block}
       error={error}
       loading={loading}
+      width={width}
+      hideCursor={hideCursor}
     >
       <div className="formField-input">
         {mask ?
           <MaskedInput
             mask={mask}
             guide={false}
+            onChange={onChange}
             {...props}
           /> :
           <input
@@ -80,9 +85,13 @@ const InputFormField = React.forwardRef<HTMLInputElement, InputFormFieldProps>((
           />
         }
         <label>{label}</label>
-        <div onClick={onIconClick}>
-          {getIcon()}
-        </div>
+        {
+          inputType !== 'text'
+            ? <div onClick={onIconClick}>
+                {getIcon()}
+              </div>
+              : null
+        }
       </div>
 
       {error ? <span>{errorMessage}</span> : !!helpMessage ? <span>{helpMessage}</span> : null}
