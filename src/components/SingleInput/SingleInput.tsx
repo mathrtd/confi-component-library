@@ -28,29 +28,31 @@ const SingleInput: React.FC<SingleInputProps> = ({
   }
   
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>, index: number) => {
-    event.preventDefault();
     const currentRefValue = inputRefs.current[index]?.value;
     const key = event.key;
-    if (currentRefValue === '') {
-      if (key === 'Backspace') {
-        inputRefs.current[index-1]?.setAttribute('value', '');
-        inputRefs.current[index-1]?.focus();
+    if (key.length === 1 || key === 'Backspace') {
+      event.preventDefault();
+      if (currentRefValue === '') {
+        if (key === 'Backspace') {
+          inputRefs.current[index-1]?.setAttribute('value', '');
+          inputRefs.current[index-1]?.focus();
+        } else {
+            inputRefs.current[index]?.setAttribute('value', key[0]);
+            inputRefs.current[index+1]?.focus();
+        }
       } else {
-          inputRefs.current[index]?.setAttribute('value', key[0]);
-          inputRefs.current[index+1]?.focus();
-      }
-    } else {
-      if (key === 'Backspace') {
-        inputRefs.current[index]?.setAttribute('value', '');
-        inputRefs.current[index-1]?.focus();
-      } else {
-        if (!(index === numberOfDigits - 1 && inputRefs.current[index]?.value !== '')) {
-          inputRefs.current[index+1]?.focus();
-          inputRefs.current[index+1]?.setAttribute('value', key[0]);
+        if (key === 'Backspace') {
+          inputRefs.current[index]?.setAttribute('value', '');
+          inputRefs.current[index-1]?.focus();
+        } else {
+          if (!(index === numberOfDigits - 1 && inputRefs.current[index]?.value !== '')) {
+            inputRefs.current[index+1]?.focus();
+            inputRefs.current[index+1]?.setAttribute('value', key[0]);
+          }
         }
       }
+      triggerOnChange();
     }
-    triggerOnChange();
   }
 
   return (
