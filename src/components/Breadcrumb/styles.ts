@@ -3,11 +3,12 @@ import { borders, colors, fontSizes, fontWeights, spacings } from '../shared/the
 
 export const ListContainer = styled.ul`
   display: flex;
-
+  font-family: 'DM Sans', sans-serif;
+  
   li{
     list-style: none;
     padding-bottom: ${spacings.sl};
-
+    
     font-style: normal;
     font-weight: ${fontWeights.w700};
     font-size: ${fontSizes.md};

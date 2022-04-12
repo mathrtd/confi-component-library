@@ -9,6 +9,7 @@ export {default as ProgressBar} from "./ProgressBar"
 export {default as Select} from "./Select"
 export {default as SingleInput} from "./SingleInput"
 export {default as Title} from "./Title"
+export {default as Toast} from "./Toast"
 export {
   colors,
   borders,

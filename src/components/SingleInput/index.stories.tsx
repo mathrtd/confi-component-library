@@ -13,5 +13,5 @@ export default {
 const Template: Story<SingleInputProps> = (args) => <SingleInput {...args} />;
 
 // Reuse that template for creating different stories
-export const text = Template.bind({});
-text.args = {numberOfDigits: 5, onChange: (e) => console.log(e)};
+export const Default = Template.bind({});
+Default.args = {numberOfDigits: 5, onChange: (e) => console.log(e)};

@@ -5,7 +5,7 @@ import Title from "./Title";
 import { TitleProps } from "./types";
 
 export default {
-  title: "Components/Title/Title",
+  title: "Components/Title",
   component: Title,
 } as Meta;
 
@@ -13,5 +13,5 @@ export default {
 const Template: Story<TitleProps> = (args) => <Title {...args} />;
 
 // Reuse that template for creating different stories
-export const TitleDefault = Template.bind({});
-TitleDefault.args = { text: 'Title' };
+export const Default = Template.bind({});
+Default.args = { text: 'Title' };
